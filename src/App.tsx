@@ -1,4 +1,4 @@
-import CameraCheck from "./CameraChack";
+import CameraCheck from "./CameraCheck";
 
 function App() {
   return (

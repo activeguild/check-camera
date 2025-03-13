@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "./CameraCheck.module.css";
 
 function CameraCheck() {
   const [status, setStatus] = useState("ステータス未確認");
@@ -26,12 +27,14 @@ function CameraCheck() {
   };
 
   return (
-    <div>
-      <h1>カメラ使用状況確認</h1>
-      <button onClick={checkCameraUsage}>カメラ確認</button>
-      <p>{status}</p>
+    <div className={styles.container}>
+      <h1 className={styles.header}>カメラ使用状況確認</h1>
+      <button className={styles.button} onClick={checkCameraUsage}>カメラ確認</button>
+      <p className={styles.status}>{status}</p>
     </div>
   );
 }
+
+
 
 export default CameraCheck;
