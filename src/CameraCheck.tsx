@@ -13,16 +13,9 @@ function CameraCheck() {
       // 取得したストリームを即時停止
       stream.getTracks().forEach((track) => track.stop());
     } catch (error) {
-      if (error instanceof Error === false) {
-        return;
-      }
-      if (error.name === "NotReadableError") {
-        console.log("カメラが他のアプリまたはタブで使用中の可能性があります");
-        setStatus("カメラが他のアプリで使用中の可能性あり");
-      } else {
         console.log("カメラにアクセスできません:", error);
-        setStatus("カメラにアクセスできません: " + error.message);
-      }
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        setStatus("カメラにアクセスできません: " + (error as any).message);
     }
   };
 
