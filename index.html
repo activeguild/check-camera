@@ -5,8 +5,18 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
   </head>
   <body>
+    <model-viewer
+    src="/kawashaki_ninja_h2.glb"
+    ios-src="/Kawasaki_Ninja_H2_free.usdz"
+    ar
+    ar-modes="scene-viewer quick-look"
+    environment-image="neutral"
+    camera-controls
+    autoplay
+  ></model-viewer>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
